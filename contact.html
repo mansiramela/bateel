@@ -1,0 +1,1330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bateel Navbar</title>
+
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+</head>
+<body>
+
+
+<!-- TOP BAR -->
+<div class="top-bar">
+    <div class="top-left">
+        <a href="contact.html" class="top-link">
+            <i class="fa-solid fa-phone"></i>
+            <span>Call Us</span>
+        </a>
+
+        <a href="https://wa.me/919999999999" target="_blank" class="top-link">
+            <i class="fa-brands fa-whatsapp"></i>
+            <span>WhatsApp</span>
+        </a>
+
+        <a href="mailto:info@example.com" class="top-link">
+            <i class="fa-solid fa-envelope"></i>
+            <span>Email message</span>
+        </a>
+    </div>
+    <div class="mobilelisticon">
+      <i class="fa-solid fa-list"></i>
+    </div>
+    <div class="top-center">DISCOVER THE DIFFERENCE</div>
+    <img src="img/FINAL LOGO 3.png" width="50" class="mobilelogo" alt="">
+
+    <div class="top-right">
+        <div class="icon-wrapper">
+            <i class="fa-regular fa-user" id="userIcon"></i>
+            <div class="dropdown" id="userDropdown">
+                <div class="dropdown-item">My Account</div>
+                <div class="dropdown-item">Create an Account</div>
+            </div>
+        </div>
+
+        <div class="icon-wrapper">
+            <i class="fa-solid fa-cart-shopping" id="cartIcon"></i>
+        </div>
+    </div>
+</div>
+
+
+<!-- CART MODAL -->
+<div class="cart-modal" id="cartModal">
+    <div class="cart-content">
+        <div class="cart-header">
+            <span>SHOPPING CART</span>
+            <span class="close-cart" id="closeCart">✕</span>
+        </div>
+
+        <p class="cart-wait">Wait a minute...</p>
+        <h2>Your Cart is Empty!</h2>
+
+        <button class="continue-btn">CONTINUE SHOPPING</button>
+    </div>
+</div>
+
+<!-- navbar section -->
+<header class="navbar">
+    <div class="logo">
+        <img src="img/FINAL LOGO 3.png" alt="Bateel Logo">
+    </div>
+
+        <nav class="nav-wrapper">
+        <ul class="nav-links" id="navLinks">
+            <li><a href="index.html">SHOP</a></li>
+            <li><a href="corporate-gift.html">CORPORATE GIFTS</a></li>
+            <li><a href="the-world.html">THE WORLD OF BATEEL</a></li>
+            <li><a href="contact.html">CONTACT US</a></li>
+        </ul>
+    </nav>
+</header>
+
+
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobileMenu">
+
+  <div class="menu-header">
+    <span class="menu-close" id="menuClose">✕</span>
+  </div>
+
+  <ul class="menu-list">
+
+    <li class="accordion">
+      <button class="accordion-btn">
+        LUXURY GIFTS <span><i class="fa-solid fa-caret-down"></i></span>
+      </button>
+      <ul class="submenu">
+        <li><a href="signature-packaging.html">Signature Packaging</a></li>
+        <li><a href="wooden-boxes.html">Luxury Wooden Boxes</a></li>
+        <li><a href="gifts-for-her.html">Gifts For Her</a></li>
+        <li><a href="gifts-for-him.html">Gifts For Him</a></li>
+        <li><a href="wedding.html">Wedding</a></li>
+      </ul>
+    </li>
+
+    <li class="accordion">
+      <button class="accordion-btn">
+        PREMIUM DATES <span><i class="fa-solid fa-caret-down"></i></span>
+      </button>
+      <ul class="submenu">
+        <li><a href="classic-dates.html">Organic Dates</a></li>
+        <li><a href="organic-dates.html">Filled Dates</a></li>
+      </ul>
+    </li>
+
+    <li class="accordion">
+      <button class="accordion-btn">
+        GOURMET FOODS <span><i class="fa-solid fa-caret-down"></i></span>
+      </button>
+      <ul class="submenu">
+        <li><a href="chocolates.html">Dubai Chocolate</a></li>
+        <li><a href="biscuits.html">Nuts & Dried Fruits</a></li>
+        <li><a href="jams.html">Coffee Connoisseur</a></li>
+        <li><a href="honey.html">Condiments</a></li>
+        <li><a href="nuts.html">Natural Syrups & Preserves</a></li>
+        <li><a href="gift-hampers.html">Biscuit & Date Bars</a></li>
+      </ul>
+    </li>
+
+      <li class="accordion">
+      <button class="accordion-btn">
+        CORPORATE GIFTS
+      </button>
+    </li>
+
+      <li class="accordion">
+      <button class="accordion-btn">
+        THE WORLD OF BATEEL
+      </button>
+    </li>
+  </ul>
+
+  <div class="menu-footer">
+    <a href="contact.html">Call Us</a>
+    <a href="https://wa.me/919999999999" target="_blank">WhatsApp</a>
+    <a href="mailto:info@example.com">Email message</a>
+  </div>
+</div>
+
+<div class="menu-overlay" id="menuOverlay"></div>
+
+
+
+<style>
+  /* MENU WRAPPER */
+.mobile-menu {
+  position: fixed;
+  top: -100%;
+  left: 0;
+  width: 100%;
+  background: #fff;
+  z-index: 9999;
+  transition: 0.4s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.mobile-menu.active {
+  top: 0;
+}
+
+/* HEADER */
+.menu-header {
+  padding: 15px;
+  border-bottom: 1px solid #eee;
+  text-align: left;
+}
+
+.menu-close {
+  font-size: 22px;
+  cursor: pointer;
+}
+
+/* MENU LIST */
+.menu-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  overflow-y: auto;
+}
+
+
+.accordion-btn,
+.single {
+  width: 100%;
+  padding: 16px;
+  border: none;
+  background: none;
+  font-size: 14px;
+  text-align: left;
+  border-bottom: 1px solid #eee;
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.submenu {
+  display: none;
+  background: #fff;
+}
+
+.submenu li a {
+  display: block;
+  padding: 14px 18px;
+  font-size: 13px;
+  border-bottom: 1px solid #eee;
+  text-decoration: none;
+  color: #000;
+}
+
+.accordion-btn span {
+  transition: transform 0.3s ease;
+}
+
+.accordion-btn.active span {
+  transform: rotate(180deg);
+}
+
+/* FOOTER */
+.menu-footer {
+  display: flex;
+  gap: 10px;
+  padding: 15px;
+  border-top: 1px solid #eee;
+}
+
+.menu-footer a {
+  flex: 1;
+  border: 1px solid #000;
+  text-align: center;
+  padding: 10px;
+  font-size: 13px;
+  text-decoration: none;
+  color: #000;
+}
+
+/* OVERLAY */
+.menu-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.4);
+  display: none;
+  z-index: 9998;
+}
+
+.menu-overlay.active {
+  display: block;
+}
+
+/* DESKTOP HIDE */
+@media (min-width: 769px) {
+  .mobile-menu,
+  .menu-overlay {
+    display: none;
+  }
+}
+
+</style>
+
+
+<script>
+  const menuBtn = document.querySelector('.mobilelisticon');
+const mobileMenu = document.getElementById('mobileMenu');
+const menuClose = document.getElementById('menuClose');
+const overlay = document.getElementById('menuOverlay');
+
+menuBtn.addEventListener('click', () => {
+  mobileMenu.classList.add('active');
+  overlay.classList.add('active');
+});
+
+menuClose.addEventListener('click', closeMenu);
+overlay.addEventListener('click', closeMenu);
+
+function closeMenu() {
+  mobileMenu.classList.remove('active');
+  overlay.classList.remove('active');
+}
+
+// Accordion
+document.querySelectorAll('.accordion-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const submenu = btn.nextElementSibling;
+    submenu.style.display =
+      submenu.style.display === 'block' ? 'none' : 'block';
+  });
+});
+
+</script>
+
+
+
+<!-- Contact Us Hero Section -->
+<section class="contact-hero">
+  <h1 class="contact-title">Contact Us</h1>
+
+  <div class="contact-hero-image">
+    <img src="img/contact-banner_jpg.avif" alt="Contact Banner">
+
+    <div class="contact-hero-text">
+      <p>
+        As a leader in the international gourmet food market, Bateel offers a
+        host of authentic culinary temptations.
+      </p>
+    </div>
+  </div>
+</section>
+
+
+<!-- faq -section -->
+<section class="faq-section">
+  <div class="faq-container">
+
+    <h2 class="faq-title">Frequently Asked Questions</h2>
+
+    <div class="faq-grid">
+
+      <!-- LEFT COLUMN -->
+      <div class="faq-column">
+        <h3>Delivery & Shipping</h3>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            <span class="icon">+</span>
+            <span class="text">How long will it take to process my order?</span>
+          </button>
+          <div class="faq-answer">
+            <p>All orders are processed within 24 hours – Saturday to Thursday, excluding holidays.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            <span class="icon">+</span>
+            <span class="text">When will my order be delivered?</span>
+          </button>
+          <div class="faq-answer">
+            <p>All confirmed orders will be delivered within 2 to 5 days using priority shipping.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            <span class="icon">+</span>
+            <span class="text">Does Bateel accept international orders?</span>
+          </button>
+          <div class="faq-answer">
+            <p>Yes, Bateel ships orders around the world.<br>
+            Orders may be subject to import duties, VAT, taxes and customs clearance charges at the destination country. All additional charges incurred will be the responsibility of the customer.</p>
+          </div>
+        </div>
+
+
+        <div class="faq-item">
+        <button class="faq-question">
+            <span class="icon">+</span>
+            <span class="text">How do I track my order status?</span>
+        </button>
+
+        <div class="faq-answer">
+            <p>
+            You will receive a confirmation email with a tracking number once your order is shipped.
+            If delayed, please contact:
+            <a 
+                href="mailto:customercare@bateel.com"
+                style="color:hsl(204, 72%, 40%); text-decoration:underline; font-weight:500;"
+            >
+                customercare@bateel.com
+            </a>
+            </p>
+        </div>
+        </div>
+
+
+        <div class="faq-item">
+          <button class="faq-question">
+            <span class="icon">+</span>
+            <span class="text">How can I change my order?</span>
+          </button>
+          <div class="faq-answer">
+            <p>Once placed, orders cannot be changed.</p>
+          </div>
+        </div>
+
+
+        <div class="faq-item">
+        <button class="faq-question">
+            <span class="icon">+</span>
+            <span class="text">What if I entered the wrong shipping address?</span>
+        </button>
+
+        <div class="faq-answer">
+            <p>If an incorrect address was provided when placing the order, please contact our    
+            <a 
+                href="mailto:customercare@bateel.com"
+                style="color:hsl(204, 72%, 40%); text-decoration:underline; font-weight:500;"
+            >
+                 customer service team
+            </a>
+                as soon as possible.<br>
+                Bateel is not responsible for failed deliveries when an incorrect / outdated address is provided, the recipient is not available, or a new delivery address is not provided within 24 hours of the first delivery attempt.
+            </p>
+        </div>
+        </div>
+
+
+    
+        <h3 class="mt">Products</h3>
+
+
+          <div class="faq-item">
+        <button class="faq-question">
+            <span class="icon">+</span>
+            <span class="text">Where can I find nutritional information on Bateel date?</span>
+        </button>
+
+        <div class="faq-answer">
+            <p>
+                A delicious guilt-free treat, each Bateel date is packed with vital<br> minerals and compounds, and presents a number of great health<br> benefits. Find out more
+            <a 
+                href=""
+                style="color:hsl(204, 72%, 40%); text-decoration:underline; font-weight:500;"
+            >
+                Here
+            </a>
+            </p>
+        </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            <span class="icon">+</span>
+            <span class="text">Why are Bateel dates so unique?</span>
+          </button>
+          <div class="faq-answer">
+            <p>As the world’s only gourmet date grower, producer and seller,<br>Bateel is renowned for impeccable standards of quality and an <br>admirable organic ethos. Discover why Bateel dates are revered <br>as the finest.</p>
+          </div>
+        </div>
+
+
+        <div class="faq-item">
+        <button class="faq-question">
+            <span class="icon">+</span>
+            <span class="text">Do you accept corporate orders?</span>
+        </button>
+
+        <div class="faq-answer">
+            <p>
+               Yes, Bateel ships orders around the world.<br>
+               Yes, get in touch with the Bateel corporate gifting team with your enquiry:
+            <a 
+                href="mailto:corporatesales@bateel.com"
+                style="color:hsl(204, 72%, 40%); text-decoration:underline; font-weight:500;"
+            >
+                corporatesales@bateel.com
+            </a>
+            </p>
+        </div>
+        </div>
+
+
+          <div class="faq-item">
+        <button class="faq-question">
+            <span class="icon">+</span>
+            <span class="text">Does Bateel have holiday gift boxes?</span>
+        </button>
+
+        <div class="faq-answer">
+            <p>
+              We offer an array of exclusive, hand-crafted gift boxes for every <br>occasion. Shop the latest Bateel collections
+            <a 
+                href=""
+                style="color:hsl(204, 72%, 40%); text-decoration:underline; font-weight:500;"
+            >
+                online.
+            </a>
+            </p>
+        </div>
+        </div>
+
+      </div>
+
+
+      <!-- RIGHT COLUMN -->
+      <div class="faq-column">
+        <h3>Returns & Refunds</h3>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            <span class="icon">+</span>
+            <span class="text">How do I return my order?</span>
+          </button>
+          <div class="faq-answer">
+            <p>As Bateel products are perishable, returns are not possible. However, you may request a replacement or refund instead.</p>
+          </div>
+        </div>
+
+          <div class="faq-item">
+        <button class="faq-question">
+            <span class="icon">+</span>
+            <span class="text">How can I request a refund or replacement for my order?</span>
+        </button>
+
+        <div class="faq-answer">
+            <p>Refunds and replacement requests will be considered if the products were damaged during delivery, the incorrect product was shipped, or products were defective or out of date.<br>The request must be emailed to   
+            <a 
+                href="mailto:customercare@bateel.com"
+                style="color:hsl(204, 72%, 40%); text-decoration:underline; font-weight:500;"
+            >
+                  customercare@bateel.com
+            </a>
+                within 48 hours of the order receipt with a detailed description and supporting photographs.
+            </p>
+        </div>
+        </div>
+
+
+        <div class="faq-item">
+          <button class="faq-question">
+            <span class="icon">+</span>
+            <span class="text">When will replacement orders be delivered?</span>
+          </button>
+          <div class="faq-answer">
+            <p>Once the request is received and approved, the replacement item(s) will be shipped within 2 to 5 working days.
+                <br>
+            Where replacements are not possible, a refund will be issued via the original payment method.</p>
+          </div>
+        </div>
+
+
+        <div class="faq-item">
+          <button class="faq-question">
+            <span class="icon">+</span>
+            <span class="text">When will I receive my refund?</span>
+          </button>
+          <div class="faq-answer">
+            <p>Once the refund request is received and approved, a refund will <br>be issued via the original payment method. Please note, refunds<br> can take 10 to 30 working days to be reflected in the account.</p>
+          </div>
+        </div>
+
+
+        <h3 class="mt">Corporate</h3>
+
+          <div class="faq-item">
+        <button class="faq-question">
+            <span class="icon">+</span>
+            <span class="text">Where can I learn more about Bateel?</span>
+        </button>
+
+        <div class="faq-answer">
+            <p>Read about Bateel’s story on the
+            <a 
+                href=""
+                style="color:lab(42.49% 69.04 -40.2); text-decoration:underline; font-weight:500;"
+            >
+                  About
+            </a>
+               page or get in touch using the form below if you have specific questions.
+            </p>
+        </div>
+        </div>
+
+
+         <div class="faq-item">
+        <button class="faq-question">
+            <span class="icon">+</span>
+            <span class="text">Is there a Bateel Boutique near me?</span>
+        </button>
+
+        <div class="faq-answer">
+            <p>Bateel is present in 11 countries with 39 boutiques. Find the nearest location
+            <a 
+                href=""
+                style="color:lch(27.18% 82.2 301.54); text-decoration:underline; font-weight:500;"
+            >
+                  Here
+            </a>
+            </p>
+        </div>
+        </div>
+
+
+        
+         <div class="faq-item">
+        <button class="faq-question">
+            <span class="icon">+</span>
+            <span class="text">Where can I find Café Bateel?</span>
+        </button>
+
+        <div class="faq-answer">
+            <p>There are several Café Bateel locations across the United Arab Emirates, Kingdom of Saudi Arabia and Oman. Find out more
+            <a 
+                href=""
+                style="color:lch(27.18% 82.2 301.54); text-decoration:underline; font-weight:500;"
+            >
+                  Here
+            </a>
+            </p>
+        </div>
+        </div>
+
+
+        <div class="faq-item">
+        <button class="faq-question">
+            <span class="icon">+</span>
+            <span class="text">Where can I find out about franchise opportunities?</span>
+        </button>
+
+        <div class="faq-answer">
+            <p> you are keen to partner with us, please e-mail:<br>
+            <a 
+                href="mailto:franchise@bateel.com"
+                style="color:oklab(74.08500000000001% -0.08975 -0.12387); text-decoration:underline; font-weight:500;"
+            >
+                  franchise@bateel.com
+            </a>
+            </p>
+        </div>
+        </div>
+
+
+
+        <div class="faq-item">
+        <button class="faq-question">
+            <span class="icon">+</span>
+            <span class="text">How do I apply to join Bateel?</span>
+        </button>
+
+        <div class="faq-answer">
+            <p>More information is available on the
+            <a 
+                href=""
+                style="color:lch(27.18% 82.2 301.54); text-decoration:underline; font-weight:500;"
+            >
+                Careers
+            </a>
+
+            pages.open<br>positions are also regularly posted on the
+            <a 
+                href="Bateel LinkedIn.html"
+                style="color:lch(27.18% 82.2 301.54); text-decoration:underline; font-weight:500;"
+            >
+                Bateel LinkedIn
+            </a>
+            pages.
+            </p>
+        </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<script>
+  document.querySelectorAll(".faq-question").forEach(btn => {
+    btn.addEventListener("click", () => {
+      const currentAnswer = btn.nextElementSibling;
+      const currentIcon = btn.querySelector(".icon");
+
+      document.querySelectorAll(".faq-answer").forEach(answer => {
+        if (answer !== currentAnswer) {
+          answer.style.maxHeight = null;
+          answer.previousElementSibling.querySelector(".icon").textContent = "+";
+        }
+      });
+
+      if (currentAnswer.style.maxHeight) {
+        currentAnswer.style.maxHeight = null;
+        currentIcon.textContent = "+";
+      } else {
+        currentAnswer.style.maxHeight = currentAnswer.scrollHeight + "px";
+        currentIcon.textContent = "−";
+      }
+    });
+  });
+</script>
+
+
+
+<!-- contact banner -->
+<div class="contact-banner">
+    <img src="img/contact-bottom-banner_jpg.avif" alt="Contact Us Banner">
+</div>
+
+
+<!-- office wrapper section -->
+<section class="office-wrapper">
+  <div class="office-box">
+
+    <h2 class="office-title">Bateel Offices</h2>
+    <div class="title-line"></div>
+
+    <div class="office-grid">
+
+      <!-- UAE -->
+      <div class="office-col">
+        <h3>UNITED ARAB EMIRATES</h3>
+        <div class="col-line"></div>
+
+        <!-- First UAE Office -->
+        <p>Bateel International L.L.C.</p>
+        <p>Business Central Towers</p>
+        <p>33rd Floor, Tower B, Media City</p>
+        <p>Tel: <a href="tel:+97144307539">+971 4 430 7539</a></p>
+        <p>Fax: <a href="tel:+97144307529">+971 4 430 7529</a></p>
+        <p>Email: <a href="mailto:onlineorder@bateel.com">onlineorder@bateel.com</a></p>
+
+        <!-- Space between offices -->
+        <div style="height:35px;"></div>
+
+        <!-- Second UAE Office -->
+        <p><strong>Bateel International Sweets<br>
+        and Chocolate Factory</strong></p>
+        <p>Dubai Investment Park 1</p>
+        <p>Tel: <a href="tel:+97148858737">+971 4 885 8737</a></p>
+        <p>Fax: <a href="tel:+97148858738">+971 4 885 8738</a></p>
+        <p>P.O. Box 7634, Dubai</p>
+      </div>
+
+      <!-- KSA -->
+      <div class="office-col">
+        <h3>KINGDOM OF SAUDI ARABIA</h3>
+        <div class="col-line"></div>
+
+        <p>Bateel Company Ltd</p>
+        <p>11th Floor, Hamad Tower</p>
+        <p>P.O. Box 12212, King Fahad Road, Riyadh</p>
+        <p>Tel: <a href="tel:8001110222">8001110222</a></p>
+        <p>Fax: <a href="tel:+966112652477">+966 11 265 2477</a></p>
+        <p>Email: <a href="mailto:info.ksa@bateel.com">info.ksa@bateel.com</a></p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- contact container section -->
+<section class="contact-section">
+  <div class="contact-container">
+
+    <!-- LEFT -->
+    <div class="contact-left">
+      <h2 class="contact-title">Quick Connect</h2>
+
+      <div class="contact-block">
+  <h3>Shop Online</h3>
+  <p>Email: <a href="mailto:ecommerce@bateel.com">ecommerce@bateel.com</a></p>
+  <p>Call: +971 800 228335 (800 BATEEL)</p>
+  <p>WhatsApp Call Center: +971 56 522 1237</p>
+</div>
+
+    <div class="contact-block">
+      <h3>Café Bateel Takeaway & Delivery (UAE)</h3>
+      <p>Email: <a href="mailto:callcentre@bateel.com">callcentre@bateel.com</a></p>
+      <p>Call: +971 800 228335 (800 BATEEL)</p>
+      <p>WhatsApp Call Center: +971 56 522 1237</p>
+    </div>
+
+    <div class="contact-block">
+      <h3>Sales Enquiries</h3>
+      <p>Email: <a href="mailto:onlineorder@bateel.com">onlineorder@bateel.com</a></p>
+    </div>
+
+    <div class="contact-block">
+      <h3>Career Opportunities</h3>
+      <p>Email: <a href="mailto:talent.uae@bateel.com">talent.uae@bateel.com</a></p>
+    </div>
+
+    <div class="contact-block">
+      <h3>Corporate Sales</h3>
+      <p>Email: <a href="mailto:corporatesales@bateel.com">corporatesales@bateel.com</a></p>
+      <p>UAE: +971 56 546 4915</p>
+      <p>Worldwide: +971 443 07539 Ext. 331</p>
+    </div>
+
+    <div class="contact-block">
+      <h3>Franchise Opportunities</h3>
+      <p>Email: <a href="mailto:franchise@bateel.com">franchise@bateel.com</a></p>
+    </div>
+
+    </div>
+
+    <!-- RIGHT -->
+    <div class="contact-right">
+      <h2 class="contact-title">Write Us</h2>
+      <p class="form-note">
+        Jot us a note and we’ll get back to you as quickly as possible.
+      </p>
+
+      <form class="contact-form">
+        <label>Subject *</label>
+        <select>
+          <option>Select One</option>
+          <option>Online Shopping</option>
+          <option>Cafe Bateel</option>
+          <option>Bateel Boutique </option>
+          <option>Corporate Gifts</option>
+          <option>Sales Inquiry</option>
+
+
+        </select>
+
+        <label>Name *</label>
+        <input type="text">
+
+        <label>Email *</label>
+        <input type="email">
+
+        <label>Phone Number</label>
+        <input type="tel">
+
+        <label>What’s on your mind? *</label>
+        <textarea rows="5"></textarea>
+
+        <button type="submit">SUBMIT</button>
+      </form>
+    </div>
+
+  </div>
+</section>
+
+
+
+
+
+
+
+
+<!-- footer section -->
+<footer class="bateel-footer">
+
+    <!-- Logo -->
+    <div class="footer-logo">
+        <img src="img/FINAL LOGO 3.png" alt="Bateel Logo">
+    </div>
+
+    <!-- Footer Columns -->
+    <div class="footer-columns">
+
+        <!-- Column 1 -->
+        <div class="footer-col">
+            <h4>
+                Bateel International
+                <span class="footer-arrow">▼</span>
+            </h4>
+            <div class="footer-links">
+                <a href="#">About Us</a>
+                <a href="#">Careers</a>
+                <a href="#">Press</a>
+                <a href="#">Contact Us</a>
+                <a href="#">Find us</a>
+                <a href="#">Bateel Rewards</a>
+                <a href="#">Franchise Opportunities</a>
+            </div>
+        </div>
+
+        <!-- Column 2 -->
+        <div class="footer-col">
+            <h4>
+                Explore
+                <span class="footer-arrow">▼</span>
+            </h4>
+            <div class="footer-links">
+                <a href="#">Bateel Farms</a>
+                <a href="#">Date Varieties</a>
+                <a href="#">Ajwa Dates</a>
+                <a href="#">Medjool Dates</a>
+                <a href="#">Single Origin Chocolate</a>
+                <a href="#">Nutrition</a>
+                <a href="#">Blog</a>
+            </div>
+        </div>
+
+        <!-- Column 3 -->
+        <div class="footer-col">
+            <h4>
+                Shopping Online
+                <span class="footer-arrow">▼</span>
+            </h4>
+            <div class="footer-links">
+                <a href="#">FAQs</a>
+                <a href="#">Shipping & Delivery</a>
+                <a href="#">Returns</a>
+                <a href="#">Cookie Policy</a>
+            </div>
+        </div>
+
+        <!-- Column 4 -->
+        <div class="footer-col">
+            <h4>
+                Our Brands
+                <span class="footer-arrow">▼</span>
+            </h4>
+            <div class="footer-links">
+                <a href="#">Bateel Boutique</a>
+                <a href="#">Café Bateel</a>
+                <a href="#">Bateel El’an</a>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Social Icons -->
+    <div class="social-icons">
+        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+        <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+        <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+        <a href="#"><i class="fa-brands fa-youtube"></i></a>
+    </div>
+
+    <!-- Bottom Bar -->
+    <div class="footer-bottom">
+        <div class="bottom-left">
+            <a href="#">Terms & Conditions</a>
+        </div>
+
+        <div class="bottom-center">
+            <a href="#">Security & Privacy Policy</a>
+        </div>
+
+        <div class="bottom-right">
+            Copyright © 2025. TSSG-TECH
+        </div>
+    </div>
+
+</footer>
+
+
+
+<style>
+  .bateel-footer {
+    background: linear-gradient(180deg, #2a1405, #1c0d03);
+    color: #fff;
+    padding-top: 10px;
+    font-family: "Times New Roman", serif;
+}
+
+/* Logo */
+.footer-logo {
+    text-align: center;
+    margin-bottom: 70px;
+}
+
+.footer-logo img {
+    width: 130px;  
+    height: auto;
+}
+
+
+/* Columns */
+.footer-columns {
+    display: flex;
+    justify-content: space-around;
+    padding: 0 100px 70px;
+}
+
+.footer-col h4 {
+    font-size: 22px;
+    margin-bottom: 25px;
+}
+
+.footer-col a {
+    display: block;
+    color: #ffffff;
+    text-decoration: underline;
+    font-size: 16px;
+    margin-bottom: 12px;
+}
+
+/* Social Icons */
+.social-icons {
+    text-align: right;
+    padding: 0 100px 40px;
+}
+
+.social-icons a {
+    color: #fff;
+    font-size: 22px;
+    margin-left: 18px;
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #caa472;
+}
+
+/* Bottom Bar */
+.footer-bottom {
+    background-color: #caa472;
+    color: #000;
+    display: flex;
+    align-items: center;
+    padding: 18px 90px;
+    font-size: 14px;
+}
+
+
+.bottom-left {
+    flex: 1;
+    padding-left: 40px; 
+}
+
+/* Center */
+.bottom-center {
+    flex: 1;
+    text-align: center;
+}
+
+/* Right */
+.bottom-right {
+    flex: 1;
+    text-align: right;
+}
+
+.footer-bottom a {
+    color: #000;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.footer-bottom a:hover {
+    text-decoration: underline;
+}
+
+/* Default hide arrows */
+.footer-arrow {
+    display: none;
+}
+
+/* Footer links wrapper */
+.footer-links {
+    transition: max-height 0.4s ease;
+}
+
+/* ================= MEDIA QUERIES ================= */
+
+/* 1200px */
+@media (max-width: 1200px) {
+    .footer-columns {
+        padding: 0 60px 60px;
+    }
+}
+
+/* 992px */
+@media (max-width: 992px) {
+    .footer-columns {
+        padding: 0 40px 60px;
+        gap: 30px;
+    }
+
+    .social-icons {
+        padding: 0 40px 40px;
+    }
+
+    .footer-bottom {
+        padding: 18px 40px;
+    }
+}
+
+/* 768px */
+@media (max-width: 768px) {
+    .footer-columns {
+        flex-wrap: wrap;
+        justify-content: center;
+        text-align:left;
+    }
+
+    .footer-col {
+        width: 45%;
+        margin-bottom: 40px;
+    }
+
+    .social-icons {
+        text-align: center;
+    }
+}
+
+/* 770px - MOBILE ACCORDION START */
+@media (max-width: 770px) {
+    .footer-logo {
+      margin-bottom: 30px;
+    }
+
+    .footer-columns {
+        flex-direction: column;
+        padding: 0 20px 20px;
+        gap: 0;
+    }
+
+    .footer-col {
+        width: 100%;
+        border-bottom: 1px solid rgba(255,255,255,0.2);
+        padding-bottom: 15px;
+        padding:12px 0;
+        margin: 0;
+    }
+
+    .footer-col h4 {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        cursor: pointer;
+        font-size: 13px;
+        margin: 0;
+        padding: 14px 0;
+    }
+
+    .footer-arrow {
+        display: inline-block;
+        font-size: 14px;
+        transition: transform 0.3s ease;
+    }
+
+    .footer-links {
+        max-height: 0;
+        overflow: hidden;
+        padding: 8px 0 0;
+    }
+
+      .footer-links a {
+        margin: 5px 0;   
+        font-size: 14px;
+    }
+
+    .footer-col.active .footer-links {
+        max-height: 500px;
+    }
+
+    .footer-col.active .footer-arrow {
+        transform: rotate(180deg);
+    }
+
+    .footer-col a {
+        text-decoration: none;
+        margin: 10px 0;
+        font-size: 15px;
+    }
+
+    .social-icons {
+       padding: 25px 0 15px;
+        text-align: center;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+        padding: 15px;
+    }
+
+    .bottom-left,
+    .bottom-center,
+    .bottom-right {
+        padding: 0;
+    }
+
+    
+    /* FORCE LEFT ALIGN (dropdown open look fix) */
+    .footer-col,
+    .footer-links,
+    .footer-links a {
+        text-align: left;
+    }
+
+    
+}
+
+@media (min-width: 771px) {
+    .footer-links {
+        max-height: none !important;
+        overflow: visible;
+    }
+
+    .footer-arrow {
+        display: none !important;
+    }
+}
+
+
+/* 480px */
+@media (max-width: 480px) {
+    .footer-logo img {
+        width: 100px;
+    }
+
+    .footer-col h4 {
+        font-size: 17px;
+    }
+}
+
+/* 360px */
+@media (max-width: 360px) {
+    .footer-col h4 {
+        font-size: 16px;
+    }
+
+    .footer-col a {
+        font-size: 14px;
+    }
+}
+
+</style>
+
+
+<script>
+document.querySelectorAll(".footer-col h4").forEach((heading) => {
+    heading.addEventListener("click", () => {
+        if (window.innerWidth <= 770) {
+            const col = heading.parentElement;
+            col.classList.toggle("active");
+        }
+    });
+});
+</script>
+
+
+
+
+
+
+
+
+<script>
+    
+// top bar section
+document.addEventListener("DOMContentLoaded", function () {
+
+    const userIcon = document.getElementById("userIcon");
+    const userDropdown = document.getElementById("userDropdown");
+
+    const cartIcon = document.getElementById("cartIcon");
+    const cartModal = document.getElementById("cartModal");
+    const closeCart = document.getElementById("closeCart");
+
+    /* USER DROPDOWN */
+    userIcon.addEventListener("click", function (e) {
+        e.stopPropagation();
+        userDropdown.style.display =
+            userDropdown.style.display === "block" ? "none" : "block";
+    });
+
+    /* CART MODAL */
+    cartIcon.addEventListener("click", function () {
+        cartModal.style.display = "block";
+    });
+
+    closeCart.addEventListener("click", function () {
+        cartModal.style.display = "none";
+    });
+
+    /* Outside click close dropdown */
+    document.addEventListener("click", function () {
+        userDropdown.style.display = "none";
+    });
+
+});
+
+
+// navbar 
+document.addEventListener("DOMContentLoaded", () => {
+  let slides = document.querySelectorAll(".slide");
+  let dots = document.querySelectorAll(".dot");
+  let index = 0;
+
+  function showSlide(i) {
+    slides.forEach(slide => slide.classList.remove("active"));
+    dots.forEach(dot => dot.classList.remove("active"));
+
+    slides[i].classList.add("active");
+    dots[i].classList.add("active");
+  }
+
+  // Automatic slide change every 4 seconds
+  setInterval(() => {
+    index++;
+    if (index >= slides.length) index = 0;
+    showSlide(index);
+  }, 4000);
+
+  // Optional: click dots to jump to slide
+  dots.forEach((dot, i) => {
+    dot.addEventListener("click", () => {
+      index = i;
+      showSlide(index);
+    });
+  });
+});
+
+
+// Navbar shrink on scroll
+window.addEventListener("scroll", () => {
+    const navbar = document.querySelector(".navbar");
+
+    if (window.scrollY > 80) {
+        navbar.classList.add("shrink");
+    } else {
+        navbar.classList.remove("shrink");
+    }
+});
+
+</script>
+
+
+</body>
+</html>
+
+
+
+
+
+
