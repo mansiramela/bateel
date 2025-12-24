@@ -447,171 +447,6 @@ document.querySelectorAll('.accordion-btn').forEach(btn => {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<script>
-    // top bar section
-document.addEventListener("DOMContentLoaded", function () {
-
-    const userIcon = document.getElementById("userIcon");
-    const userDropdown = document.getElementById("userDropdown");
-
-    const cartIcon = document.getElementById("cartIcon");
-    const cartModal = document.getElementById("cartModal");
-    const closeCart = document.getElementById("closeCart");
-
-    /* USER DROPDOWN */
-    userIcon.addEventListener("click", function (e) {
-        e.stopPropagation();
-        userDropdown.style.display =
-            userDropdown.style.display === "block" ? "none" : "block";
-    });
-
-    /* CART MODAL */
-    cartIcon.addEventListener("click", function () {
-        cartModal.style.display = "block";
-    });
-
-    closeCart.addEventListener("click", function () {
-        cartModal.style.display = "none";
-    });
-
-    /* Outside click close dropdown */
-    document.addEventListener("click", function () {
-        userDropdown.style.display = "none";
-    });
-
-});
-
-
-// navbar 
-document.addEventListener("DOMContentLoaded", () => {
-  let slides = document.querySelectorAll(".slide");
-  let dots = document.querySelectorAll(".dot");
-  let index = 0;
-
-  function showSlide(i) {
-    slides.forEach(slide => slide.classList.remove("active"));
-    dots.forEach(dot => dot.classList.remove("active"));
-
-    slides[i].classList.add("active");
-    dots[i].classList.add("active");
-  }
-
-  // Automatic slide change every 4 seconds
-  setInterval(() => {
-    index++;
-    if (index >= slides.length) index = 0;
-    showSlide(index);
-  }, 4000);
-
-  // Optional: click dots to jump to slide
-  dots.forEach((dot, i) => {
-    dot.addEventListener("click", () => {
-      index = i;
-      showSlide(index);
-    });
-  });
-});
-
-
-// Navbar shrink on scroll
-window.addEventListener("scroll", () => {
-    const navbar = document.querySelector(".navbar");
-
-    if (window.scrollY > 80) {
-        navbar.classList.add("shrink");
-    } else {
-        navbar.classList.remove("shrink");
-    }
-});
-
-
-
-// making video section 
-const iframe = document.getElementById("makingVideo");
-  const player = new Vimeo.Player(iframe);
-  const btn = document.querySelector(".video-btn");
-
-  // Scroll Play / Pause
-  const observer = new IntersectionObserver(
-    (entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          player.play();
-          btn.textContent = "Pause";
-        } else {
-          player.pause();
-          btn.textContent = "Play";
-        }
-      });
-    },
-    { threshold: 0.5 }
-  );
-
-  observer.observe(iframe);
-
-  // Manual Play / Pause
-  btn.addEventListener("click", () => {
-    player.getPaused().then(paused => {
-      if (paused) {
-        player.play();
-        btn.textContent = "Pause";
-      } else {
-        player.pause();
-        btn.textContent = "Play";
-      }
-    });
-  });
-</script>
-
-
-
-
-
 <!-- footer section -->
 <footer class="bateel-footer">
 
@@ -630,13 +465,12 @@ const iframe = document.getElementById("makingVideo");
                 <span class="footer-arrow">▼</span>
             </h4>
             <div class="footer-links">
-                <a href="#">About Us</a>
-                <a href="#">Careers</a>
-                <a href="#">Press</a>
-                <a href="#">Contact Us</a>
-                <a href="#">Find us</a>
-                <a href="#">Bateel Rewards</a>
-                <a href="#">Franchise Opportunities</a>
+                <a href="index.html">Home</a>
+                <a href="about.html">About US</a>
+                <a href="shop.html">Shop</a>
+                <a href="corporate-gift.html">Corporate Gifts</a>
+                <a href="the-world.html">Power Dates</a>
+                <a href="contact.html">Contact US</a>
             </div>
         </div>
 
@@ -647,11 +481,10 @@ const iframe = document.getElementById("makingVideo");
                 <span class="footer-arrow">▼</span>
             </h4>
             <div class="footer-links">
-                <a href="#">Bateel Farms</a>
+                <a href="farm.html">Bateel Farms</a>
                 <a href="#">Date Varieties</a>
                 <a href="#">Ajwa Dates</a>
                 <a href="#">Medjool Dates</a>
-                <a href="#">Single Origin Chocolate</a>
                 <a href="#">Nutrition</a>
                 <a href="#">Blog</a>
             </div>
@@ -664,23 +497,11 @@ const iframe = document.getElementById("makingVideo");
                 <span class="footer-arrow">▼</span>
             </h4>
             <div class="footer-links">
-                <a href="#">FAQs</a>
                 <a href="#">Shipping & Delivery</a>
                 <a href="#">Returns</a>
                 <a href="#">Cookie Policy</a>
-            </div>
-        </div>
-
-        <!-- Column 4 -->
-        <div class="footer-col">
-            <h4>
-                Our Brands
-                <span class="footer-arrow">▼</span>
-            </h4>
-            <div class="footer-links">
-                <a href="#">Bateel Boutique</a>
-                <a href="#">Café Bateel</a>
-                <a href="#">Bateel El’an</a>
+                <a href="#">Terms & Condition</a>
+                <a href="#">Security & Privacy Policy</a>
             </div>
         </div>
 
@@ -706,12 +527,11 @@ const iframe = document.getElementById("makingVideo");
         </div>
 
         <div class="bottom-right">
-            Copyright © 2025. TSSG-TECH
+            Copyright © 2025. Tssg-tech
         </div>
     </div>
 
 </footer>
-
 
 
 <style>
@@ -1001,3 +821,126 @@ document.querySelectorAll(".footer-col h4").forEach((heading) => {
 </script>
 
 
+
+
+<script>
+    // top bar section
+document.addEventListener("DOMContentLoaded", function () {
+
+    const userIcon = document.getElementById("userIcon");
+    const userDropdown = document.getElementById("userDropdown");
+
+    const cartIcon = document.getElementById("cartIcon");
+    const cartModal = document.getElementById("cartModal");
+    const closeCart = document.getElementById("closeCart");
+
+    /* USER DROPDOWN */
+    userIcon.addEventListener("click", function (e) {
+        e.stopPropagation();
+        userDropdown.style.display =
+            userDropdown.style.display === "block" ? "none" : "block";
+    });
+
+    /* CART MODAL */
+    cartIcon.addEventListener("click", function () {
+        cartModal.style.display = "block";
+    });
+
+    closeCart.addEventListener("click", function () {
+        cartModal.style.display = "none";
+    });
+
+    /* Outside click close dropdown */
+    document.addEventListener("click", function () {
+        userDropdown.style.display = "none";
+    });
+
+});
+
+
+// navbar 
+document.addEventListener("DOMContentLoaded", () => {
+  let slides = document.querySelectorAll(".slide");
+  let dots = document.querySelectorAll(".dot");
+  let index = 0;
+
+  function showSlide(i) {
+    slides.forEach(slide => slide.classList.remove("active"));
+    dots.forEach(dot => dot.classList.remove("active"));
+
+    slides[i].classList.add("active");
+    dots[i].classList.add("active");
+  }
+
+  // Automatic slide change every 4 seconds
+  setInterval(() => {
+    index++;
+    if (index >= slides.length) index = 0;
+    showSlide(index);
+  }, 4000);
+
+  // Optional: click dots to jump to slide
+  dots.forEach((dot, i) => {
+    dot.addEventListener("click", () => {
+      index = i;
+      showSlide(index);
+    });
+  });
+});
+
+
+// Navbar shrink on scroll
+window.addEventListener("scroll", () => {
+    const navbar = document.querySelector(".navbar");
+
+    if (window.scrollY > 80) {
+        navbar.classList.add("shrink");
+    } else {
+        navbar.classList.remove("shrink");
+    }
+});
+
+
+
+// making video section 
+const iframe = document.getElementById("makingVideo");
+  const player = new Vimeo.Player(iframe);
+  const btn = document.querySelector(".video-btn");
+
+  // Scroll Play / Pause
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          player.play();
+          btn.textContent = "Pause";
+        } else {
+          player.pause();
+          btn.textContent = "Play";
+        }
+      });
+    },
+    { threshold: 0.5 }
+  );
+
+  observer.observe(iframe);
+
+  // Manual Play / Pause
+  btn.addEventListener("click", () => {
+    player.getPaused().then(paused => {
+      if (paused) {
+        player.play();
+        btn.textContent = "Pause";
+      } else {
+        player.pause();
+        btn.textContent = "Play";
+      }
+    });
+  });
+</script>
+
+
+
+
+</body>
+</html>

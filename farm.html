@@ -1,0 +1,1039 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bateel Navbar</title>
+
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+</head>
+<body>
+
+
+<!-- TOP BAR -->
+<div class="top-bar">
+    <div class="top-left">
+        <a href="contact.html" class="top-link">
+            <i class="fa-solid fa-phone"></i>
+            <span>Call Us</span>
+        </a>
+
+        <a href="https://wa.me/919999999999" target="_blank" class="top-link">
+            <i class="fa-brands fa-whatsapp"></i>
+            <span>WhatsApp</span>
+        </a>
+
+        <a href="mailto:info@example.com" class="top-link">
+            <i class="fa-solid fa-envelope"></i>
+            <span>Email message</span>
+        </a>
+    </div>
+    <div class="mobilelisticon">
+      <i class="fa-solid fa-list"></i>
+    </div>
+    <div class="top-center">DISCOVER THE DIFFERENCE</div>
+    <img src="img/FINAL LOGO 3.png" width="50" class="mobilelogo" alt="">
+
+    <div class="top-right">
+        <div class="icon-wrapper">
+            <i class="fa-regular fa-user" id="userIcon"></i>
+            <div class="dropdown" id="userDropdown">
+                <div class="dropdown-item">My Account</div>
+                <div class="dropdown-item">Create an Account</div>
+            </div>
+        </div>
+
+        <div class="icon-wrapper">
+            <i class="fa-solid fa-cart-shopping" id="cartIcon"></i>
+        </div>
+    </div>
+</div>
+
+
+<!-- CART MODAL -->
+<div class="cart-modal" id="cartModal">
+    <div class="cart-content">
+        <div class="cart-header">
+            <span>SHOPPING CART</span>
+            <span class="close-cart" id="closeCart">✕</span>
+        </div>
+
+        <p class="cart-wait">Wait a minute...</p>
+        <h2>Your Cart is Empty!</h2>
+
+        <button class="continue-btn">CONTINUE SHOPPING</button>
+    </div>
+</div>
+
+<!-- navbar section -->
+<header class="navbar">
+    <div class="logo">
+        <img src="img/FINAL LOGO 3.png" alt="Bateel Logo">
+    </div>
+
+    <nav class="nav-wrapper">
+        <ul class="nav-links" id="navLinks">
+            <li><a href="index.html">SHOP</a></li>
+            <li><a href="corporate-gift.html">CORPORATE GIFTS</a></li>
+            <li><a href="the-world.html">POWER DATES</a></li>
+            <li><a href="contact.html">CONTACT US</a></li>
+        </ul>
+    </nav>
+</header>
+
+
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobileMenu">
+
+  <div class="menu-header">
+    <span class="menu-close" id="menuClose">✕</span>
+  </div>
+
+  <ul class="menu-list">
+
+    <li class="accordion">
+      <button class="accordion-btn">
+        LUXURY GIFTS <span><i class="fa-solid fa-caret-down"></i></span>
+      </button>
+      <ul class="submenu">
+        <li><a href="signature-packaging.html">Signature Packaging</a></li>
+        <li><a href="wooden-boxes.html">Luxury Wooden Boxes</a></li>
+        <li><a href="gifts-for-her.html">Gifts For Her</a></li>
+        <li><a href="gifts-for-him.html">Gifts For Him</a></li>
+        <li><a href="wedding.html">Wedding</a></li>
+      </ul>
+    </li>
+
+    <li class="accordion">
+      <button class="accordion-btn">
+        PREMIUM DATES <span><i class="fa-solid fa-caret-down"></i></span>
+      </button>
+      <ul class="submenu">
+        <li><a href="classic-dates.html">Organic Dates</a></li>
+        <li><a href="organic-dates.html">Filled Dates</a></li>
+      </ul>
+    </li>
+
+    <li class="accordion">
+      <button class="accordion-btn">
+        GOURMET FOODS <span><i class="fa-solid fa-caret-down"></i></span>
+      </button>
+      <ul class="submenu">
+        <li><a href="chocolates.html">Dubai Chocolate</a></li>
+        <li><a href="biscuits.html">Nuts & Dried Fruits</a></li>
+        <li><a href="jams.html">Coffee Connoisseur</a></li>
+        <li><a href="honey.html">Condiments</a></li>
+        <li><a href="nuts.html">Natural Syrups & Preserves</a></li>
+        <li><a href="gift-hampers.html">Biscuit & Date Bars</a></li>
+      </ul>
+    </li>
+
+      <li class="accordion" onclick="location.href='corporate-gift.html'">
+      <button class="accordion-btn">
+        CORPORATE GIFTS
+      </button>
+    </li>
+
+      <li class="accordion" onclick="location.href='the-world.html'">
+      <button class="accordion-btn">
+        POWER DATES
+      </button>
+    </li>
+  </ul>
+
+  <div class="menu-footer">
+    <a href="contact.html">Call Us</a>
+    <a href="https://wa.me/919999999999" target="_blank">WhatsApp</a>
+    <a href="mailto:info@example.com">Email message</a>
+  </div>
+</div>
+
+<div class="menu-overlay" id="menuOverlay"></div>
+
+
+<style>
+  /* MENU WRAPPER */
+.mobile-menu {
+  position: fixed;
+  top: -100%;
+  left: 0;
+  width: 100%;
+  background: #fff;
+  z-index: 9999;
+  transition: 0.4s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.mobile-menu.active {
+  top: 0;
+}
+
+/* HEADER */
+.menu-header {
+  padding: 15px;
+  border-bottom: 1px solid #eee;
+  text-align: left;
+}
+
+.menu-close {
+  font-size: 22px;
+  cursor: pointer;
+}
+
+/* MENU LIST */
+.menu-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  overflow-y: auto;
+}
+
+
+.accordion-btn,
+.single {
+  width: 100%;
+  padding: 16px;
+  border: none;
+  background: none;
+  font-size: 14px;
+  text-align: left;
+  border-bottom: 1px solid #eee;
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.submenu {
+  display: none;
+  background: #fff;
+}
+
+.submenu li a {
+  display: block;
+  padding: 14px 18px;
+  font-size: 13px;
+  border-bottom: 1px solid #eee;
+  text-decoration: none;
+  color: #000;
+}
+
+.accordion-btn span {
+  transition: transform 0.3s ease;
+}
+
+.accordion-btn.active span {
+  transform: rotate(180deg);
+}
+
+/* FOOTER */
+.menu-footer {
+  display: flex;
+  gap: 10px;
+  padding: 15px;
+  border-top: 1px solid #eee;
+}
+
+.menu-footer a {
+  flex: 1;
+  border: 1px solid #000;
+  text-align: center;
+  padding: 10px;
+  font-size: 13px;
+  text-decoration: none;
+  color: #000;
+}
+
+/* OVERLAY */
+.menu-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.4);
+  display: none;
+  z-index: 9998;
+}
+
+.menu-overlay.active {
+  display: block;
+}
+
+/* DESKTOP HIDE */
+@media (min-width: 769px) {
+  .mobile-menu,
+  .menu-overlay {
+    display: none;
+  }
+}
+
+</style>
+
+
+<script>
+  const menuBtn = document.querySelector('.mobilelisticon');
+const mobileMenu = document.getElementById('mobileMenu');
+const menuClose = document.getElementById('menuClose');
+const overlay = document.getElementById('menuOverlay');
+
+menuBtn.addEventListener('click', () => {
+  mobileMenu.classList.add('active');
+  overlay.classList.add('active');
+});
+
+menuClose.addEventListener('click', closeMenu);
+overlay.addEventListener('click', closeMenu);
+
+function closeMenu() {
+  mobileMenu.classList.remove('active');
+  overlay.classList.remove('active');
+}
+
+// Accordion
+document.querySelectorAll('.accordion-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const submenu = btn.nextElementSibling;
+    submenu.style.display =
+      submenu.style.display === 'block' ? 'none' : 'block';
+  });
+});
+</script>
+
+
+
+  <!-- HERO SECTION -->
+  <section class="farm-hero">
+    <div class="farm-hero-inner">
+      <img src="img/Sec-1.avif" alt="Bateel Farm Hero">
+      <h1>Welcome to the world of Bateel</h1>
+    </div>
+  </section>
+
+
+<!-- farm content  -->
+  <section class="farm-content">
+  <div class="farm-content-inner">
+    <h2>From Tree to Luxurious Boutique</h2>
+
+    <p>
+      Rooted in Arabian culture and hospitality since 1936, Bateel enjoys an
+      unparalleled legacy as the world’s only gourmet date grower, producer
+      and seller. Inventor of the gourmet date and founder of the luxurious
+      date boutique, Bateel not only elevated the noble fruit to a premium
+      level but created a new market.
+    </p>
+  </div>
+</section>
+
+
+
+
+<!-- FARM VIDEO SECTION -->
+<section class="farm-video">
+  <div class="farm-video-inner">
+
+    <div class="video-wrap">
+      <video
+        controls
+        preload="metadata"
+        poster="https://prod-bateel.gumlet.io/media/wysiwyg/our-farm/video_cover2.jpg"
+      >
+        <source src="img/bateel.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+
+  </div>
+</section>
+
+
+
+<!-- farms section -->
+<div class="farms-section">
+  <div class="farms-container">
+
+    <!-- LEFT CONTENT BOX -->
+    <div class="farms-text">
+      <h2>Our Farms</h2>
+      <p>
+        Our organic date farms are nestled in a fertile oasis in the Al
+        Ghat region of Saudi Arabia, north of the capital Riyadh. Here,
+        by the historic green valleys of the Tuwyaq Mountains, over
+        100,000 date palm trees grow, basking in the temperate climate
+        and naturally flowing sweet water for irrigation.
+      </p>
+      <p>
+        This unique terroir lends to the inimitable taste of every Bateel date.
+      </p>
+    </div>
+
+    <!-- RIGHT IMAGE BOX -->
+    <div class="farms-image">
+      <img src="img/DSC_1845.avif" alt="Our Farms">
+    </div>
+
+  </div>
+</div>
+
+
+<!-- sustainable farming  -->
+<section class="sustainable-farming">
+  <div class="sustainable-container">
+    <h2 class="section-title">Sustainable Farming</h2>
+
+    <p>
+      Using the best farming practices, Bateel’s cultivation techniques are kept
+      as close to nature as possible. Date palm trees can live as long as a
+      century and produce up to 150 kilograms of fruit each year.
+    </p>
+
+    <p>
+      Every date palm is watered from the naturally occurring desert wadi,
+      transforming the landscape into a fertile reserve. Our strategically
+      placed irrigation system is channeled across the farm to enable farmers
+      to recycle and preserve the readily available water of the land.
+    </p>
+
+    <p>
+      Bateel groves produce nearly 2,000 tonnes of organic waste per year, all
+      of which is returned to the farm as nutrient-rich compost. We take great
+      pride in our overarching organic ethos and continue to innovate, using
+      unique sustainable methods for abundant yields.
+    </p>
+  </div>
+</section>
+
+
+
+<!-- date farming section -->
+<section class="date-farming-section">
+  <div class="date-farming-container">
+
+  
+    <div class="date-images">
+      <div class="img-box">
+        <img src="https://prod-bateel.gumlet.io/media/wysiwyg/our-farm/DSC_2051-Edit_1_.webp">
+      </div>
+      <div class="img-box">
+        <img src="https://prod-bateel.gumlet.io/media/wysiwyg/our-farm/DSC_4220_new.webp">
+      </div>
+    </div>
+
+    <div class="date-content">
+      <p>
+        The species are dioecious – meaning there are males and females – and
+        pollination is dependent on human assistance. Bateel painstakingly
+        places branchlets of male white flowers amongst female blossoms in a
+        process that requires constant care and attention. Only female trees
+        produce fruit and, once pollinated, the tree begins to produce fruit
+        after six years.
+      </p>
+
+      <p>
+        Branches of our date palms are regularly thinned, even if it means
+        cutting away 50 percent of the fruit. The thinning process ensures
+        optimum air circulation and space, so the remaining fruits grow to
+        their best potential. As they begin to ripen, maturing dates are
+        enveloped in well-ventilated cloth to deter birds and insects, which
+        also helps avoid the use of pesticides.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- certified farm section -->
+<section class="certified-farms-section">
+  <div class="certified-container">
+
+  
+    <div class="certified-image">
+      <img src="img/Banner.avif" alt="trade & Organic Farms">
+      <div class="image-text">
+        Fair Trade &amp; Organic Certified Farms
+      </div>
+    </div>
+
+    <div class="certified-content">
+      <p>
+        Bateel harvests more than 3,000 tonnes of the highest quality, organic
+        dates a year. Staying true to tradition, Bateel farmers climb the date
+        palms, often up to 20 metres several times over the course of the
+        season in order to hand-pick each date at the perfect time.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- world section -->
+<section class="world-class-section">
+  <div class="world-class-box">
+
+  
+    <div class="world-class-inner">
+
+      <h2 class="world-title">World Class Production</h2>
+
+      <p>
+        As soon as the dates are harvested by hand in Saudi Arabia, they are
+        immediately stored to halt further ripening and lock in flavours. The
+        fruit is then cleaned using state-of-the-art technologies, before being
+        assessed and graded to match stringent standards for size, colour,
+        translucency and skin condition. This ensures quality and consistency
+        and is why every Bateel date is the best of the best.
+      </p>
+
+      <p>
+        The dates are then transported to our world-class, fully integrated
+        state-of-the-art facility in Dubai, where a team of dedicated artisans
+        prepare and stuff dates with premium nuts, candied fruits and chocolate.
+        The fruit is incredibly delicate, so it’s a highly-skilled craft that’s
+        still done entirely by hand.
+      </p>
+
+    
+      <div class="production-grid">
+        <div class="production-item">
+          <img src="https://prod-bateel.gumlet.io/media/wysiwyg/our-farm/DSC_1561-Edit.webp" alt="date farming">
+          <h4>Date Farming</h4>
+        </div>
+
+        <div class="production-item">
+          <img src="https://prod-bateel.gumlet.io/media/wysiwyg/our-farm/Layer_32.webp" alt="date processing">
+          <h4>Date Processing</h4>
+        </div>
+
+        <div class="production-item">
+          <img src="https://prod-bateel.gumlet.io/media/wysiwyg/our-farm/Layer_30.webp" alt="Manufacturing">
+          <h4>Manufacturing</h4>
+        </div>
+
+        <div class="production-item">
+          <img src="https://prod-bateel.gumlet.io/media/wysiwyg/our-farm/Layer_31.webp" alt="warehouse & distribution">
+          <h4>Warehouse &<br>Distribution</h4>
+        </div>
+      </div>
+
+    </div>
+  
+
+  </div>
+</section>
+
+
+
+
+<section class="boutique-info">
+  <div class="boutique-container">
+
+    <!-- Left Image -->
+    <div class="boutique-image">
+      <img src="https://prod-bateel.gumlet.io/media/wysiwyg/our-farm/bateel_boutique.webp">
+    </div>
+
+    <!-- Right Content -->
+    <div class="boutique-content">
+      <h2>Luxury you can taste</h2>
+      <p>
+        The Bateel Boutique is the ultimate indulgence and gifting destination.
+        Our success today reflects the quality of our ingredients and commitment
+        to innovation. From authentic dates and exquisite chocolates, pralines
+        and truffles, to other exclusive fine food products, it is an invitation
+        to experience the exceptional.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+
+
+
+<!-- footer section -->
+<footer class="bateel-footer">
+
+    <!-- Logo -->
+    <div class="footer-logo">
+        <img src="img/FINAL LOGO 3.png" alt="Bateel Logo">
+    </div>
+
+    <!-- Footer Columns -->
+    <div class="footer-columns">
+
+        <!-- Column 1 -->
+        <div class="footer-col">
+            <h4>
+                Bateel International
+                <span class="footer-arrow">▼</span>
+            </h4>
+            <div class="footer-links">
+                <a href="index.html">Home</a>
+                <a href="about.html">About US</a>
+                <a href="shop.html">Shop</a>
+                <a href="corporate-gift.html">Corporate Gifts</a>
+                <a href="the-world.html">Power Dates</a>
+                <a href="contact.html">Contact US</a>
+            </div>
+        </div>
+
+        <!-- Column 2 -->
+        <div class="footer-col">
+            <h4>
+                Explore
+                <span class="footer-arrow">▼</span>
+            </h4>
+            <div class="footer-links">
+                <a href="farm.html">Bateel Farms</a>
+                <a href="#">Date Varieties</a>
+                <a href="#">Ajwa Dates</a>
+                <a href="#">Medjool Dates</a>
+                <a href="#">Nutrition</a>
+                <a href="#">Blog</a>
+            </div>
+        </div>
+
+        <!-- Column 3 -->
+        <div class="footer-col">
+            <h4>
+                Shopping Online
+                <span class="footer-arrow">▼</span>
+            </h4>
+            <div class="footer-links">
+                <a href="#">Shipping & Delivery</a>
+                <a href="#">Returns</a>
+                <a href="#">Cookie Policy</a>
+                <a href="#">Terms & Condition</a>
+                <a href="#">Security & Privacy Policy</a>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Social Icons -->
+    <div class="social-icons">
+        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+        <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+        <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+        <a href="#"><i class="fa-brands fa-youtube"></i></a>
+    </div>
+
+    <!-- Bottom Bar -->
+    <div class="footer-bottom">
+        <div class="bottom-left">
+            <a href="#">Terms & Conditions</a>
+        </div>
+
+        <div class="bottom-center">
+            <a href="#">Security & Privacy Policy</a>
+        </div>
+
+        <div class="bottom-right">
+            Copyright © 2025. Tssg-tech
+        </div>
+    </div>
+
+</footer>
+
+
+
+<style>
+  .bateel-footer {
+    background: linear-gradient(180deg, #2a1405, #1c0d03);
+    color: #fff;
+    padding-top: 10px;
+    font-family: "Times New Roman", serif;
+}
+
+/* Logo */
+.footer-logo {
+    text-align: center;
+    margin-bottom: 70px;
+}
+
+.footer-logo img {
+    width: 130px;  
+    height: auto;
+}
+
+
+/* Columns */
+.footer-columns {
+    display: flex;
+    justify-content: space-around;
+    padding: 0 100px 70px;
+}
+
+.footer-col h4 {
+    font-size: 22px;
+    margin-bottom: 25px;
+}
+
+.footer-col a {
+    display: block;
+    color: #ffffff;
+    text-decoration: underline;
+    font-size: 16px;
+    margin-bottom: 12px;
+}
+
+/* Social Icons */
+.social-icons {
+    text-align: right;
+    padding: 0 100px 40px;
+}
+
+.social-icons a {
+    color: #fff;
+    font-size: 22px;
+    margin-left: 18px;
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #caa472;
+}
+
+/* Bottom Bar */
+.footer-bottom {
+    background-color: #caa472;
+    color: #000;
+    display: flex;
+    align-items: center;
+    padding: 18px 90px;
+    font-size: 14px;
+}
+
+
+.bottom-left {
+    flex: 1;
+    padding-left: 40px; 
+}
+
+/* Center */
+.bottom-center {
+    flex: 1;
+    text-align: center;
+}
+
+/* Right */
+.bottom-right {
+    flex: 1;
+    text-align: right;
+}
+
+.footer-bottom a {
+    color: #000;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.footer-bottom a:hover {
+    text-decoration: underline;
+}
+
+/* Default hide arrows */
+.footer-arrow {
+    display: none;
+}
+
+/* Footer links wrapper */
+.footer-links {
+    transition: max-height 0.4s ease;
+}
+
+
+
+/* 1200px */
+@media (max-width: 1200px) {
+    .footer-columns {
+        padding: 0 60px 60px;
+    }
+}
+
+/* 992px */
+@media (max-width: 992px) {
+    .footer-columns {
+        padding: 0 40px 60px;
+        gap: 30px;
+    }
+
+    .social-icons {
+        padding: 0 40px 40px;
+    }
+
+    .footer-bottom {
+        padding: 18px 40px;
+    }
+}
+
+/* 768px */
+@media (max-width: 768px) {
+    .footer-columns {
+        flex-wrap: wrap;
+        justify-content: center;
+        text-align:left;
+    }
+
+    .footer-col {
+        width: 45%;
+        margin-bottom: 40px;
+    }
+
+    .social-icons {
+        text-align: center;
+    }
+}
+
+/* 770px */
+@media (max-width: 770px) {
+    .footer-logo {
+      margin-bottom: 30px;
+    }
+
+    .footer-columns {
+        flex-direction: column;
+        padding: 0 20px 20px;
+        gap: 0;
+    }
+
+    .footer-col {
+        width: 100%;
+        border-bottom: 1px solid rgba(255,255,255,0.2);
+        padding-bottom: 15px;
+        padding:12px 0;
+        margin: 0;
+    }
+
+    .footer-col h4 {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        cursor: pointer;
+        font-size: 13px;
+        margin: 0;
+        padding: 14px 0;
+    }
+
+    .footer-arrow {
+        display: inline-block;
+        font-size: 14px;
+        transition: transform 0.3s ease;
+    }
+
+    .footer-links {
+        max-height: 0;
+        overflow: hidden;
+        padding: 8px 0 0;
+    }
+
+      .footer-links a {
+        margin: 5px 0;   
+        font-size: 14px;
+    }
+
+    .footer-col.active .footer-links {
+        max-height: 500px;
+    }
+
+    .footer-col.active .footer-arrow {
+        transform: rotate(180deg);
+    }
+
+    .footer-col a {
+        text-decoration: none;
+        margin: 10px 0;
+        font-size: 15px;
+    }
+
+    .social-icons {
+       padding: 25px 0 15px;
+        text-align: center;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+        padding: 15px;
+    }
+
+    .bottom-left,
+    .bottom-center,
+    .bottom-right {
+        padding: 0;
+    }
+
+    
+  
+    .footer-col,
+    .footer-links,
+    .footer-links a {
+        text-align: left;
+    }
+
+    
+}
+
+@media (min-width: 771px) {
+    .footer-links {
+        max-height: none !important;
+        overflow: visible;
+    }
+
+    .footer-arrow {
+        display: none !important;
+    }
+}
+
+
+/* 480px */
+@media (max-width: 480px) {
+    .footer-logo img {
+        width: 100px;
+    }
+
+    .footer-col h4 {
+        font-size: 17px;
+    }
+}
+
+/* 360px */
+@media (max-width: 360px) {
+    .footer-col h4 {
+        font-size: 16px;
+    }
+
+    .footer-col a {
+        font-size: 14px;
+    }
+}
+
+</style>
+
+
+<script>
+document.querySelectorAll(".footer-col h4").forEach((heading) => {
+    heading.addEventListener("click", () => {
+        if (window.innerWidth <= 770) {
+            const col = heading.parentElement;
+            col.classList.toggle("active");
+        }
+    });
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+    
+// top bar section
+document.addEventListener("DOMContentLoaded", function () {
+
+    const userIcon = document.getElementById("userIcon");
+    const userDropdown = document.getElementById("userDropdown");
+
+    const cartIcon = document.getElementById("cartIcon");
+    const cartModal = document.getElementById("cartModal");
+    const closeCart = document.getElementById("closeCart");
+
+    /* USER DROPDOWN */
+    userIcon.addEventListener("click", function (e) {
+        e.stopPropagation();
+        userDropdown.style.display =
+            userDropdown.style.display === "block" ? "none" : "block";
+    });
+
+    /* CART MODAL */
+    cartIcon.addEventListener("click", function () {
+        cartModal.style.display = "block";
+    });
+
+    closeCart.addEventListener("click", function () {
+        cartModal.style.display = "none";
+    });
+
+    /* Outside click close dropdown */
+    document.addEventListener("click", function () {
+        userDropdown.style.display = "none";
+    });
+
+});
+
+
+// navbar 
+document.addEventListener("DOMContentLoaded", () => {
+  let slides = document.querySelectorAll(".slide");
+  let dots = document.querySelectorAll(".dot");
+  let index = 0;
+
+  function showSlide(i) {
+    slides.forEach(slide => slide.classList.remove("active"));
+    dots.forEach(dot => dot.classList.remove("active"));
+
+    slides[i].classList.add("active");
+    dots[i].classList.add("active");
+  }
+
+  // Automatic slide change every 4 seconds
+  setInterval(() => {
+    index++;
+    if (index >= slides.length) index = 0;
+    showSlide(index);
+  }, 4000);
+
+  // Optional: click dots to jump to slide
+  dots.forEach((dot, i) => {
+    dot.addEventListener("click", () => {
+      index = i;
+      showSlide(index);
+    });
+  });
+});
+
+
+// Navbar shrink on scroll
+window.addEventListener("scroll", () => {
+    const navbar = document.querySelector(".navbar");
+
+    if (window.scrollY > 80) {
+        navbar.classList.add("shrink");
+    } else {
+        navbar.classList.remove("shrink");
+    }
+});
+
+</script>
